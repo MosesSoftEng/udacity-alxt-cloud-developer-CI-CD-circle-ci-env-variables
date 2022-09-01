@@ -17,7 +17,7 @@ jobs:
 
       - run: |
           docker --version
-          docker build -t simple-node .
+          docker build -t simple-node --build-arg NAME=${NAME} .
           docker tag simple-node mosessofteng/simple-node:latest
 
       - run: |
